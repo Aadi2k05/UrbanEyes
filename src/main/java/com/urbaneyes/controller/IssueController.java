@@ -22,14 +22,12 @@ public class IssueController {
     }
 
     @PostMapping("/report")
-    public String submitIssue(@ModelAttribute Issue issue) {
-
-        issue.setIssueType("Road Damage");
-        issue.setSeverity("High");
-        issue.setConfidenceScore(92);
-        issue.setPriorityScore(85);
-        issue.setRiskLevel("High");
-        issue.setDegradationPercentage(35.0);
+    public String submitIssue(@ModelAttribute Issue issue)
+    {
+        issue.setConfidenceScore(90);
+        issue.setPriorityScore(80);
+        issue.setRiskLevel("Medium");
+        issue.setDegradationPercentage(20.0);
 
         issueService.save(issue);
 
