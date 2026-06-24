@@ -43,4 +43,8 @@ public class Issue {
     private String status;
 
     private LocalDateTime createdAt;
+
+    private String location;
+
+    private String imagePath;
 }
